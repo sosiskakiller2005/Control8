@@ -1,0 +1,30 @@
+﻿<Page x:Class="Control8.View.Pages.AccountingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control8.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="615"
+      Title="AddAtivityPaGE">
+
+    <StackPanel Margin="10">
+        <TextBlock Text="Введите дату"/>
+        <Border Height="20"/>
+        <DatePicker Name="DateDp"/>
+        <Border Height="20"/>
+        <TextBlock Text="Выберите группу"/>
+        <Border Height="20"/>
+        <ComboBox Name="GroupCmb"/>
+        <Border Height="20"/>
+        <TextBlock Text="Выберите активность"/>
+        <Border Height="20"/>
+        <ComboBox Name="ActivityCmb"/>
+        <Border Height="20"/>
+        <TextBlock Text="Введите оценку"/>
+        <Border Height="20"/>
+        <TextBox Name="MarkTb"/>
+        <Border Height="20"/>
+        <Button Name="OkBtn" Content="Добавить" Click="OkBtn_Click"/>
+    </StackPanel>
+</Page>
