@@ -9,22 +9,55 @@
       Title="AddAtivityPaGE">
 
     <StackPanel Margin="10">
-        <TextBlock Text="Введите дату"/>
+        <ListView Name="JournalLv">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding DateEvent}"/>
+                    <GridViewColumn Header="Команда" DisplayMemberBinding="{Binding Group.Name}"/>
+                    <GridViewColumn Header="Специальость" DisplayMemberBinding="{Binding Special.Name}"/>
+                    <GridViewColumn Header="Активность" DisplayMemberBinding="{Binding Activity.Name}"/>
+                    <GridViewColumn Header="Направление" DisplayMemberBinding="{Binding Activity.Direction.Name}"/>
+                    <GridViewColumn Header="Оценка" DisplayMemberBinding="{Binding Mark}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
         <Border Height="20"/>
-        <DatePicker Name="DateDp"/>
-        <Border Height="20"/>
-        <TextBlock Text="Выберите группу"/>
-        <Border Height="20"/>
-        <ComboBox Name="GroupCmb"/>
-        <Border Height="20"/>
-        <TextBlock Text="Выберите активность"/>
-        <Border Height="20"/>
-        <ComboBox Name="ActivityCmb"/>
-        <Border Height="20"/>
-        <TextBlock Text="Введите оценку"/>
-        <Border Height="20"/>
-        <TextBox Name="MarkTb"/>
-        <Border Height="20"/>
-        <Button Name="OkBtn" Content="Добавить" Click="OkBtn_Click"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+                <TextBlock Text="Введите дату"/>
+                <Border Height="20"/>
+                <TextBlock Text="Выберите специальность"/>
+                <Border Height="20"/>
+                <ComboBox Name="SpecialCmb" SelectionChanged="SpecialCmb_SelectionChanged"/>
+                <Border Height="20"/>
+                <TextBlock Text="Выберите группу"/>
+                <Border Height="20"/>
+                <ComboBox Name="GroupCmb"/>
+                <Border Height="20"/>
+                <TextBlock Text="Введите оценку"/>
+                <Border Height="20"/>
+                <Border Height="20"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <DatePicker Name="DateDp"/>
+                <Border Height="20"/>
+                <TextBlock Text="Выберите статус соревнования"/>
+                <Border Height="20"/>
+                <ComboBox Name="DirectionCmb" SelectionChanged="DirectionCmb_SelectionChanged"/>
+                <Border Height="20"/>
+                <TextBlock Text="Выберите активность"/>
+                <Border Height="20"/>
+                <ComboBox Name="ActivityCmb"/>
+                <Border Height="20"/>
+                <TextBox Name="MarkTb"/>
+                <Border Height="20"/>
+                <Button Name="OkBtn" Content="Добавить" Click="OkBtn_Click"/>
+            </StackPanel>
+        </Grid>
     </StackPanel>
 </Page>

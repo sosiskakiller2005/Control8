@@ -19,4 +19,4 @@
         <Border Height="50"/>
         <Button Name="OkBtn" Click="OkBtn_Click" Content="Добавить" Width="300"/>
     </StackPanel>
-</Page>
+</Page>  
