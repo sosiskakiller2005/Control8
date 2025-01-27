@@ -1,0 +1,33 @@
+﻿<Page x:Class="Control8.View.Pages.ReportPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control8.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="615"
+      Title="ReportPage2">
+
+    <StackPanel Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Выберите специальность"/>
+            <Border Width="20"/>
+            <ComboBox Name="SpecialCmb"/>
+            <Button Name="SearchBtn" Click="SearchBtn_Click" Content="Поиск"/>
+        </StackPanel>
+        <Border Height="20"/>
+        <DataGrid Name="GroupDg" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Name}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="SelectBtn" Content="Выбрать" Click="SelectBtn_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+   
+        </DataGrid>
+    </StackPanel>
+</Page>

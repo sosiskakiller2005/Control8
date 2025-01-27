@@ -1,4 +1,5 @@
-﻿using Control8.View.Pages;
+﻿using Control8.AppData;
+using Control8.View.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Control8.View.Windows
         {
             InitializeComponent();
             MainFrm.Navigate(new StartPage());
+            FrameHelper.selectedFrame = MainFrm;
         }
 
         private void AddRegionHl_Click(object sender, RoutedEventArgs e)
@@ -34,6 +36,12 @@ namespace Control8.View.Windows
         private void AccountingHl_Click(object sender, RoutedEventArgs e)
         {
             MainFrm.Navigate( new AccountingPage());
+        }
+
+        private void Report2Hl_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrm.Navigate( new ReportPage2());
+
         }
     }
 }

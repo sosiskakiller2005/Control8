@@ -23,7 +23,7 @@
                 <Border Height="50"/>
                 <TextBlock><Hyperlink Name="Report1Hl">Отчет 1</Hyperlink></TextBlock>
                 <Border Height="50"/>
-                <TextBlock><Hyperlink Name="Report2Hl">отчет 2</Hyperlink></TextBlock>
+                <TextBlock><Hyperlink Name="Report2Hl" Click="Report2Hl_Click">отчет 2</Hyperlink></TextBlock>
             </StackPanel>
         </Grid>
 
