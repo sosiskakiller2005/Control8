@@ -11,7 +11,7 @@
     <StackPanel Margin="20">
         <Button Name="PrintBtn" Content="Печать"/>
         <Border Height="20"/>
-        <DataGrid Name="ActivityDg">
+        <DataGrid Name="ActivityDg" Height="200" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Активность" Binding="{Binding Activity.Direction.Name}"/>
                 <DataGridTextColumn Header="Балл" Binding="{Binding Mark}"/>

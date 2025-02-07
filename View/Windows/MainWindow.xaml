@@ -21,7 +21,7 @@
                 <Border Height="50"/>
                 <TextBlock><Hyperlink Name="AccountingHl" Click="AccountingHl_Click">Учет</Hyperlink></TextBlock>
                 <Border Height="50"/>
-                <TextBlock><Hyperlink Name="Report1Hl">Отчет 1</Hyperlink></TextBlock>
+                <TextBlock><Hyperlink Name="Report1Hl" Click="Report1Hl_Click">Отчет 1</Hyperlink></TextBlock>
                 <Border Height="50"/>
                 <TextBlock><Hyperlink Name="Report2Hl" Click="Report2Hl_Click">отчет 2</Hyperlink></TextBlock>
             </StackPanel>

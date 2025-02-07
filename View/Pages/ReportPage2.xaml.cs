@@ -22,7 +22,7 @@ namespace Control8.View.Pages
     /// </summary>
     public partial class ReportPage2 : Page
     {
-        Entities context = new Entities();
+        Entities context = new Entities(); 
         public ReportPage2()
         {
             InitializeComponent();
@@ -39,11 +39,6 @@ namespace Control8.View.Pages
         private void SelectBtn_Click(object sender, RoutedEventArgs e)
         {
             FrameHelper.selectedFrame.Navigate(new ActivityPage(GroupDg.SelectedItem as Group));
-        }
-
-        private void SelectBtn_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 } 

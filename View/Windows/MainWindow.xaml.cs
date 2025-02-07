@@ -43,5 +43,11 @@ namespace Control8.View.Windows
             MainFrm.Navigate( new ReportPage2());
 
         }
+
+        private void Report1Hl_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrm.Navigate( new ReportPage1());
+
+        }
     }
 }
